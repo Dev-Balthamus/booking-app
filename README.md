@@ -1,8 +1,4 @@
-# React + Vite
+# Booking App by Gruppo A - FS #26 - DevelHope
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Realizzare con React un'app di car rental, su modello fornito al link:
+https://www.uplabs.com/posts/caras-car-rental-app-ui-kit
