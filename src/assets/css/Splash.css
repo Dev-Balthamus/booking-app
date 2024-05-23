@@ -1,0 +1,8 @@
+#main-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.horizontal-padding {
+  padding: 0 2rem;
+}
