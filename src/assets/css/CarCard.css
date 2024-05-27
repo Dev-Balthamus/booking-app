@@ -1,0 +1,32 @@
+.car-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1 rem;
+  position: relative;
+  border-radius: 2rem;
+  background-color: rgb(245, 192, 21);
+}
+
+.wishlist {
+  margin-left: 90%;
+  padding: 1rem;
+  display: flex;
+  color: red;
+  width: 24px;
+  height: auto;
+  position: absolute;
+}
+
+.wishlist :hover {
+  fill: red;
+}
+
+.car-card h6 {
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.car-card p {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
