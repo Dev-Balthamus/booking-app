@@ -6,6 +6,7 @@ export default function App() {
   return (
     <main id="app-container">
       <DataForm />
+      <Splash />
       <BookingSummary />
     </main>
   );
