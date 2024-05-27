@@ -1,0 +1,13 @@
+.form-data {
+  background-color: aqua;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border: 1px solid black;
+  gap: 1rem;
+}
+.form-data input {
+  width: 100%;
+}
+.location {
+  grid-column: span 2 / span 2;
+}
