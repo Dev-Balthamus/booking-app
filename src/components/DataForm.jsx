@@ -21,7 +21,8 @@ export default function DataForm() {
         </svg>
       </div>
       <div>
-        <input type="date" class="pickupd" placeholder="time" />
+        <input type="date" class="pickupd" />
+        <div class="placeholder">Pickup Date</div>
       </div>
       <div>
         <input type="time" class="pickupt" />
@@ -33,9 +34,7 @@ export default function DataForm() {
         <input type="time" class="returnt" />
       </div>
       <div class="location">
-        <button type="submit" placeholder="Search">
-          Search
-        </button>
+        <button class="horizontal-padding button-primary">Get Started</button>
       </div>
     </form>
   );
