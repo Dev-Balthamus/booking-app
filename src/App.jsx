@@ -1,21 +1,17 @@
-import DataForm from "./components/DataForm";
 import Splash from "./components/Splash";
-import Navbar from "./components/Navbar";
-import BookingSummary from "./components/BookingSummary";
-
+import { useState } from "react";
+import AppContent from "./components/AppContent";
 
 export default function App() {
+  const [page, setPage] = useState("splash");
+
   return (
     <main id="app-container">
-<<<<<<< HEAD
-      <Splash />
-=======
-      <Navbar />
-      <Splash />
-      <DataForm />
-      <Splash />
-      <BookingSummary />
->>>>>>> 2f91e47929173161aa9456cbc54234bb275d3428
+      {page === "splash" ? (
+        <Splash setPage={setPage} />
+      ) : (
+        <AppContent page={page} setPage={setPage} />
+      )}
     </main>
   );
 }
