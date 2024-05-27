@@ -6,10 +6,10 @@ export default function Splash() {
       <section id="image-container">
         <img
           class="horizontal-padding"
-          src="https://immagini.alvolante.it/sites/default/files/styles/anteprima_lunghezza_640/public/serie_auto_galleria/2018/04/lamborghini_urus_ant_0.png"
+          src="/AutoPrincipale.png"
           width="640"
           height="290"
-          alt="immagine-auto-principale"
+          alt="Immagine Auto Principale"
         />
       </section>
       <section id="text-plus-button">
