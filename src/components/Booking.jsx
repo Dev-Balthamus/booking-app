@@ -31,6 +31,7 @@ export default function Booking() {
           <CarCard key={id} name={name} price={price} image={image} />
         ))}
       </div>
+      <BookingSummary />
     </div>
   );
 }
