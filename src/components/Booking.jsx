@@ -1,6 +1,7 @@
 import CarCard from "./CarCard";
 import DataForm from "./DataForm";
 import BookingSummary from "./BookingSummary";
+import useWishlist from "../hooks/useWishlist";
 
 export default function Booking() {
   const cars = [
@@ -24,15 +25,24 @@ export default function Booking() {
     },
   ];
 
+  const { handleWishlist, isWish } = useWishlist();
+
   return (
     <div>
       <DataForm />
       <div>
         {cars.map(({ id, name, price, image }) => (
-          <CarCard key={id} name={name} price={price} image={image} />
+          <CarCard
+            key={id}
+            id={id}
+            name={name}
+            price={price}
+            image={image}
+            handleWishlist={handleWishlist}
+            isWish={isWish}
+          />
         ))}
       </div>
-      <BookingSummary />
     </div>
   );
 }
