@@ -1,32 +1,64 @@
 .car-card {
   display: flex;
-  flex-direction: column;
-  padding: 1 rem;
-  position: relative;
+  justify-content: space-between;
   border-radius: 2rem;
-  background-color: rgb(245, 192, 21);
+  background-color: rgb(230, 223, 203);
 }
 
-.wishlist {
-  margin-left: 90%;
-  padding: 1rem;
-  display: flex;
-  color: red;
+.heart-icon {
   width: 24px;
+  color: red;
   height: auto;
   position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
 
-.wishlist :hover {
+.heart-icon :hover {
   fill: red;
 }
 
 .car-card h6 {
-  padding: 1rem;
-  font-size: 2rem;
+  max-width: 120%;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .car-card p {
-  padding: 1rem;
   font-size: 1.5rem;
+}
+
+.img-container img {
+  width: 100%;
+  height: auto;
+}
+
+.img-container {
+  width: 60%;
+  height: auto;
+  position: relative;
+}
+
+.car-card-text {
+  gap: 5px;
+  padding: 1rem;
+  width: 40%;
+  height: 100%;
+  justify-content: left;
+  display: flex;
+
+  flex-direction: column;
+  margin-left: 2rem;
+}
+
+.car-card-text a {
+  width: 7rem;
+  font-weight: bold;
+  margin-top: 10px;
+  border: 10px solid rgb(245, 192, 20);
+  color: black;
+  background-color: rgb(245, 192, 20);
+  text-decoration: none;
+  border-radius: 0.1rem;
+  text-align: center;
 }
