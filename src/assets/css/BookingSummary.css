@@ -22,3 +22,7 @@
 .orderDetails ul > li {
   padding: 0.75rem;
 }
+
+.horizontal-padding {
+  padding: 0 2rem;
+}

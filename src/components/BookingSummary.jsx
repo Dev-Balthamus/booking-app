@@ -14,6 +14,9 @@ export default function BookingSummary() {
         <li>Tax :</li>
         <li>Total Payable :</li>
       </ul>
+      <button className="horizontal-padding button-primary">
+        Rent Car Now
+      </button>
     </div>
   );
 }
