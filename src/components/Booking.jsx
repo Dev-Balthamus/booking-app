@@ -1,5 +1,6 @@
 import CarCard from "./CarCard";
 import DataForm from "./DataForm";
+import BookingSummary from "./BookingSummary";
 
 export default function Booking() {
   const cars = [
