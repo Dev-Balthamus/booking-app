@@ -3,19 +3,20 @@ import "../assets/css/CarCard.css";
 export default function CarCard({ name, price, image }) {
   return (
     <div className="car-card">
-      <div className="car-card-info">
+      <div className="car-card-text">
         <h6>{name}</h6>
         <p>{price}</p>
+        <a href="#">BOOK NOW</a>
       </div>
-      <img src={image} alt="Car" />
-      <div className="wishlist">
+      <div className="img-container">
+        <img src={image} alt="Car" />
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="size-6"
+          className="heart-icon"
         >
           <path
             strokeLinecap="round"
