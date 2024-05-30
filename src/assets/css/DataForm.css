@@ -13,9 +13,7 @@
   border: 2px solid #ccc;
   border-radius: 4px;
 }
-.form-data > .location > input {
-  margin-right: 30px;
-}
+
 .location {
   grid-column: span 2 / span 2;
 }
@@ -23,7 +21,27 @@
   padding: 0 2rem;
 }
 
-.form-data svg {
+.form-data > .location svg {
+  position: relative;
+  top: -30px;
+  height: 24px;
+  width: 24px;
+}
+
+.location > input::placeholder {
+  text-indent: 20px;
+}
+
+.date > svg {
+  margin-left: 100px;
+  position: relative;
+  top: -30px;
+  height: 24px;
+  width: 24px;
+}
+
+.time > svg {
+  margin-left: 100px;
   position: relative;
   top: -30px;
   height: 24px;
