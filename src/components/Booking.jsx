@@ -42,6 +42,7 @@ export default function Booking() {
             isWish={isWish}
           />
         ))}
+        <BookingSummary />
       </div>
     </div>
   );
