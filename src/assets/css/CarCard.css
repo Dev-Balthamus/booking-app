@@ -2,7 +2,8 @@
   display: flex;
   justify-content: space-between;
   border-radius: 2rem;
-  background-color: rgb(230, 223, 203);
+  background-color: #fdf8f8;
+  border: 1px solid #a7a3a3;
 }
 
 .heart-icon {
@@ -12,10 +13,6 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
-}
-
-.heart-icon :hover {
-  fill: red;
 }
 
 .car-card h6 {
@@ -29,7 +26,8 @@
 }
 
 .img-container img {
-  width: 100%;
+  margin-top: 5px;
+  width: 90%;
   height: auto;
 }
 

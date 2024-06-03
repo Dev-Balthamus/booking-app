@@ -1,6 +1,7 @@
 import Splash from "./components/Splash";
 import { useState } from "react";
 import AppContent from "./components/AppContent";
+import Wishlist from "./components/Wishlist";
 
 export default function App() {
   const [page, setPage] = useState("splash");
