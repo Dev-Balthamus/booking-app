@@ -1,14 +1,14 @@
 .form-data {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  border: 1px solid black;
   gap: 1rem;
   color: #999;
+  margin: 1rem 0;
 }
 .form-data input {
   width: 100%;
   color: #999;
-  padding: 5px;
+  padding: 10px;
   font-size: 16px;
   border: 2px solid #ccc;
   border-radius: 4px;
@@ -22,8 +22,9 @@
 }
 
 .form-data > .location svg {
-  position: relative;
-  top: -30px;
+  position: absolute;
+  top: 8px;
+  left: 5px;
   height: 24px;
   width: 24px;
 }
@@ -32,18 +33,17 @@
   text-indent: 20px;
 }
 
-.date > svg {
-  margin-left: 100px;
-  position: relative;
-  top: -30px;
+:is(.date, .time) > svg {
+  position: absolute;
+  top: 8px;
+  right: 5px;
   height: 24px;
   width: 24px;
 }
-
-.time > svg {
-  margin-left: 100px;
+.form-data > div {
   position: relative;
-  top: -30px;
-  height: 24px;
-  width: 24px;
+}
+
+.location > input {
+  padding-left: 35px;
 }
