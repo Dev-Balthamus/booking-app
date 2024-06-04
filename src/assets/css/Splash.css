@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .horizontal-padding {
@@ -11,18 +12,39 @@
 }
 
 #image-container {
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
   position: relative;
 }
 
 #image-container:before {
   content: "";
   position: absolute;
-  height: 340px;
-  width: 500px;
+  height: 290px;
+  width: 730px;
+  border-radius: 150px;
   background-color: #fad71a;
-  top: -75px;
-  left: 0;
+  top: -40px;
+  left: -82px;
   z-index: -1;
-  transform: rotate(30deg);
+  transform: rotate(25deg);
+}
+
+#splash-text {
+  margin-bottom: 2rem;
+}
+
+#splash-text h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+}
+
+#splash-text p {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 650;
+  line-height: 1.4;
+  margin-bottom: 0.3rem;
 }
