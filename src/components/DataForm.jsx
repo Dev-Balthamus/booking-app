@@ -1,11 +1,15 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import "../assets/css/DataForm.css";
+import useSWR from "swr";
+import { BASEURL, fetcher } from "../utils";
 export default function DataForm() {
   const pickupReturnRef = useRef();
   const pickupDateRef = useRef();
   const pickupTimeRef = useRef();
   const returnDateRef = useRef();
   const returnTimeRef = useRef();
+
+  const [selectedLocation, setSelectedLocation] = useState(0);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,28 +24,38 @@ export default function DataForm() {
     console.log(form);
   };
 
+  const { data, error, isLoading } = useSWR(BASEURL + "/locations", fetcher);
+
+  const handleSelectChange = (e) => {
+    const id = e.target.value;
+    setSelectedLocation(id);
+  };
+
   return (
     <form className="form-data" onSubmit={handleSubmit}>
       <div className="location">
-        <input
-          type="text"
-          placeholder="Pickup & Return Location"
-          ref={pickupReturnRef}
-        />
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth="1.5"
-          stroke="currentColor"
-          className="size-6"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-          />
-        </svg>
+        <select id="pickupSelect" onChange={handleSelectChange}>
+          <option>Scegli la località</option>
+          {!isLoading &&
+            !error &&
+            data.length > 0 &&
+            data.map(({ id, name }) => (
+              <option key={id} value={id} disabled={id == selectedLocation}>
+                {name}
+              </option>
+            ))}
+        </select>
+        <select id="returnSelect" onChange={handleSelectChange}>
+          <option>Scegli la località</option>
+          {!isLoading &&
+            !error &&
+            data.length > 0 &&
+            data.map(({ id, name }) => (
+              <option key={id} value={id} disabled={id == selectedLocation}>
+                {name}
+              </option>
+            ))}
+        </select>
       </div>
       <div className="date">
         <input
