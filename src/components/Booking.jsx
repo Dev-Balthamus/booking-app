@@ -9,6 +9,7 @@ import { useRef } from "react";
 export default function Booking() {
   const { handleWishlist, isWish } = useWishlist();
   const { data, error, isLoading, mutate } = useSWR(BASEURL + "/cars", fetcher);
+
   const idRef = useRef();
   const nameRef = useRef();
 

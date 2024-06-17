@@ -1,5 +1,7 @@
 import clsx from "clsx";
 import "../assets/css/CarCard.css";
+import { useDispatch, useSelector } from "react-redux";
+import { setId } from "../features/booking/bookingSlice";
 
 export default function CarCard({
   id,
@@ -9,12 +11,21 @@ export default function CarCard({
   handleWishlist,
   isWish,
 }) {
+  const dispatch = useDispatch();
+  const { idCarToBooking } = useSelector((state) => state.booking);
+
   return (
     <div className="car-card">
       <div className="car-card-text">
         <h6>{name}</h6>
         <p>{price}</p>
-        <a href="#">BOOK NOW</a>
+        <button
+          type="button"
+          onClick={() => dispatch(setId(id))}
+          disabled={idCarToBooking == id}
+        >
+          {idCarToBooking == id ? <span>BOOKED</span> : <span>BOOK NOW</span>}
+        </button>
       </div>
       <div className="img-container">
         <img src={image} alt="Car" />

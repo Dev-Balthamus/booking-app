@@ -1,12 +1,17 @@
+import { useDispatch, useSelector } from "react-redux";
 import "../assets/css/Navbar.css";
 import clsx from "clsx";
+import { setPage } from "../features/global/globalSlice";
 
-export default function Navbar({ page, setPage }) {
+export default function Navbar() {
+  const { page } = useSelector((state) => state.global);
+  const dispatch = useDispatch();
+
   return (
     <nav className="menu">
       <ul>
         <li>
-          <button type="button" onClick={() => setPage("splash")}>
+          <button type="button" onClick={() => dispatch(setPage("splash"))}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -24,7 +29,7 @@ export default function Navbar({ page, setPage }) {
           </button>
         </li>
         <li>
-          <button type="button" onClick={() => setPage("booking")}>
+          <button type="button" onClick={() => dispatch(setPage("booking"))}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -42,7 +47,7 @@ export default function Navbar({ page, setPage }) {
           </button>
         </li>
         <li>
-          <button type="button" onClick={() => setPage("wishlist")}>
+          <button type="button" onClick={() => dispatch(setPage("wishlist"))}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -60,7 +65,7 @@ export default function Navbar({ page, setPage }) {
           </button>
         </li>
         <li>
-          <button type="button" onClick={() => setPage("profile")}>
+          <button type="button" onClick={() => dispatch(setPage("profile"))}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

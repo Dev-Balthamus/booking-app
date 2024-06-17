@@ -1,6 +1,10 @@
+import { useDispatch } from "react-redux";
 import "../assets/css/Splash.css";
+import { setPage } from "../features/global/globalSlice";
 
-export default function Splash({ setPage }) {
+export default function Splash() {
+  const dispatch = useDispatch();
+
   return (
     <div id="main-wrapper">
       <section id="image-container" className="horizontal-padding">
@@ -19,7 +23,10 @@ export default function Splash({ setPage }) {
           </p>
         </div>
         <div id="splash-button" className="horizontal-padding">
-          <button className="button-primary" onClick={() => setPage("booking")}>
+          <button
+            className="button-primary"
+            onClick={() => dispatch(setPage("booking"))}
+          >
             Get Started
           </button>
         </div>
